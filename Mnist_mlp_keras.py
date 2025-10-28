@@ -38,7 +38,10 @@ model.add(Dense(128,'relu'))  #layer containg 128 neuron
 model.add(Dense(10,'softmax'))       #10 neurons last layer
 
 #compile
-model.compile(optimizer='adam',loss='categorical_crossentropy')
+model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #Train
 model.fit(x_train,y_train,epochs=10,batch_size=64) #64 images are sent each time
+
+#Evaluate
+model.evaluate(x_test,y_test)
