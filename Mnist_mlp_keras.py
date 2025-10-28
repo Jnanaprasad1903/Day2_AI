@@ -41,9 +41,29 @@ model.add(Dense(10,'softmax'))       #10 neurons last layer
 model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #Train
-model.fit(x_train,y_train,epochs=10,batch_size=64) #64 images are sent each time
+result=model.fit(x_train,y_train,epochs=10,batch_size=64,validation_split=0.2) #64 images are sent each time
 
 #Evaluate
 loss,accuracy = model.evaluate(x_test,y_test)
 print(f"test loss:{loss}")
 print(f"test accuracy:{accuracy}")
+print(result.history.keys())
+print(result.history.values())
+print(result.history)
+
+#visualization
+plt.plot(result.history['val_accuracy'],label="validation accuracy",color="blue")
+plt.plot(result.history['accuracy'],label="train accuracy",color="green")
+plt.title("Train_accuracy vs Val_accuracy")
+plt.xlabel("Epochs")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.show()
+
+plt.plot(result.history['val_loss'],label="validation loss",color="blue")
+plt.plot(result.history['loss'],label="train loss",color="green")
+plt.title("Train_loss vs Val_loss")
+plt.xlabel("Epochs")
+plt.ylabel("loss")
+plt.legend()
+plt.show()
