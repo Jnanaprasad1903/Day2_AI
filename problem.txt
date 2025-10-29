@@ -1,0 +1,44 @@
+Experiment with depth(number of layers)
+
+Model 1:
+Build a model with one hidden layer, and train it
+Find the vaalidation accuracy.
+(128)
+
+Model 2:
+Build a model with 3 hidden layers and train it
+Find the vaalidation accuracy.   
+(1024,512,256)
+
+Model 3:
+Build a model with 5 hidden layers and 
+Find the vaalidation accuracy
+(1024,512,256,128,64)
+
+plot the vaalidation accuracy for all 3 models in a single plot
+
+plot the vaalidation loss for all 3 models
+
+***********************************************************************************************************************************
+Experiment with optimizers(number of layers)
+
+Model 1:
+Build a model with SGD optimizers, and train it
+Find the validation accuracy.
+(SGD)
+
+Model 2:
+Build a model with Adam optimizers and train it
+Find the vaalidation accuracy.   
+(Adam)
+
+Model 3:
+Build a model with RMSprop optimizers and 
+Find the validation accuracy
+(RMSprop)
+
+plot the validation accuracy for all 3 models in a single plot
+
+plot the validation loss for all 3 models
+
+NOTE: different model names for each of the model
