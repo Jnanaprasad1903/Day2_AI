@@ -26,7 +26,7 @@ class cifar100_mlp(nn.Module):
     def __init__(self):
         super(cifar100_mlp,self).__init__()
         self.flatten = nn.Flatten()        
-        self.fc1 = nn.Linear(32*32*3,1024)
+        self.fc1 = nn.Linear(32*32*3,1024) #fully connected layer
         self.fc2 = nn.Linear(1024,512)
         self.fc3 = nn.Linear(512,256)
         self.fc4 = nn.Linear(256,128)

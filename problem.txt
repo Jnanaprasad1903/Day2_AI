@@ -42,3 +42,16 @@ plot the validation accuracy for all 3 models in a single plot
 plot the validation loss for all 3 models
 
 NOTE: different model names for each of the model
+
+******************************************************************************************************************************
+imporove its accuracy of cnn program
+plot the train vs validation accuracy and loss
+tryout with input
+*******************************************************************************************************************************
+1.mobilenet_v2
+
+2. cifar10 with mlp
+3.cifar10 with cnn
+4.use any pretrained model on cifar10 (resnet)
+********************************************************************************************************************************
+llm fine tuning
